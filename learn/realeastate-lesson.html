@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Create a Python Real Estate App!</title>
+    <link rel="icon" href="../inc/favicon.ico?v=2" type="image/x-icon" />
+    <link rel="stylesheet" href="../inc/style.css">
+    <script src="../inc/lightbox.min.js"></script>
+</head>
+<body>
+<div class="container">
+<h1>Real Estate Python Lesson</h1>
+    <ol>
+        <li>Property class</li>
+
+        <ul>
+        <li>init sqft, beds, baths, kws</li>
+        <li>catch kwargs super</li>
+        <li>init selfs</li>
+        <br>
+        <li>def display</li>
+        <li>use formatting display propery details</li>
+        <br>
+        <li>def prompt init</li>
+        <li>return property details input dictionary</li>
+        <li>create prompt static method</li>
+        </ul><br>
+
+        <li>def valid input (input string, options)</li>
+
+        <ul>
+            <li>combine input string with options</li>
+            <li>set combination in an input</li>
+            <li>while user response not in options</li>
+            <li>repeat input</li>
+            <li>return</li>
+        </ul><br>
+
+        <li>sub Property class Apartment</li>
+
+        <ul>
+            <li>set valids (balcony, laundry)</li>
+            <li>def initiate valids and catch all</li>
+            <li>init super class kws</li>
+            <li>set valid selfs</li>
+            <br>
+            <li>def display</li>
+            <li>init super display</li>
+            <li>print and format selfs</li>
+            <br>
+            <li>def promt init</li>
+            <li>set parent init</li>
+            <li>send input sting and valid options to get_valid_input fuction</li>
+            <li>dict update parent init and return</li>
+            <li>set promt init static method</li>
+        </ul><br>
+
+        <li>sub Property class House</li>
+
+        <ul>
+            <li>set valids (garage, fence)</li>
+            <li>def initiate valids and catch all</li>
+            <li>init super class kws</li>
+            <li>set valid selfs</li>
+            <br>
+            <li>def display</li>
+            <li>init super display</li>
+            <li>print and format selfs</li>
+            <br>
+            <li>def promt init</li>
+            <li>set parent init</li>
+            <li>send input sting and valid options to get_valid_input fuction</li>
+            <li>dict update parent init and return</li>
+            <li>set promt init static method</li>
+        </ul><br>
+
+        <li>class Purchase</li>
+        <ul>
+            <li>def init price, taxes, catch all</li>
+            <li>super catch all</li>
+            <li>set selves</li>
+            <br>
+            <li>def display selves</li>
+            <br>
+            <li>prompt init</li>
+            <li>return dict input for selves</li>
+            <li>promt init static method</li>
+        </ul><br>
+
+        <li>class Rental</li>
+        <ul>
+            <li>def init furnished, utilities, rent, catch all</li>
+            <li>super catch all</li>
+            <li>set selves</li>
+            <br>
+            <li>def display selves</li>
+            <br>
+            <li>prompt init</li>
+            <li>return dict input for selves</li>
+            <li>get_valid_input furnished ("yes", "no")</li>
+            <li>promt init static method</li>
+        </ul><br>
+
+        <li>sub Rental sub House class HouseRental</li>
+        <ul>
+            <li>promp init</li>
+            <li>set House promt to variable</li>
+            <li>variable.update (dict.update) Rental prompt</li>
+            <li>return variable</li>
+            <li>set promp static method</li>
+
+        </ul><br>
+
+        <li>sub Rental sub Apartment class ApartmentRental</li>
+        <ul>
+            <li>promp init</li>
+            <li>set Apartment promt to variable</li>
+            <li>variable.update (dict.update) Rental prompt</li>
+            <li>return variable</li>
+            <li>set promp static method</li>
+        </ul><br>
+
+        <li>sub Purchase sub Apartment class ApartmentPurchase</li>
+        <ul>
+            <li>promp init</li>
+            <li>set Apartment promt to variable</li>
+            <li>variable.update (dict.update) Purchase prompt</li>
+            <li>return variable</li>
+            <li>set promp static method</li>
+        </ul><br>
+
+        <li>sub Purchase sub House class HousePurchase</li>
+        <ul>
+            <li>promp init</li>
+            <li>set House promt to variable</li>
+            <li>variable.update (dict.update) Purchase prompt</li>
+            <li>return variable</li>
+            <li>set promp static method</li>
+        </ul><br>
+
+        <li>Agent class</li>
+        <ul>
+            <li>def type map</li>
+            <li>create key tuple dict</li>
+            <li>house rental HouseRental</li>
+            <li>house purchase HousePurchase</li>
+            <li>apartment rental ApartmentRental</li>
+            <li>apartment purchase ApartmentPurchase</li>
+            <br>
+            <li>def init self property list to blank list</li>
+            <br>
+            <li>def display properties</li>
+            <li>for x in property list</li>
+            <li>display() x</li>
+            <br>
+            <li>def add property</li>
+            <li>set property type to get_valid_input (string, house or apartment)</li>
+            <li>set payment type to get_valid_input (string, purchase or rent)</li>
+            <br>
+            <li>PropertyClass to self type dict[(property type, payment type)]</li>
+            <li>set init args to prompy_init() PropertyClass</li>
+            <li>self property list append PropertyClass(catch all init args)</li>
+        </ul>
+    </ol>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+</div>
+
+
+
+
+
+
+
+    </ol>
+</body>
+</html>

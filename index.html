@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+        <style>
+        body
+        {
+            font-family: Roboto;
+            padding-left:5px;
+        }
+        /* unvisited link */
+        a:link {
+            color: red;
+        }
+
+        /* visited link */
+        a:visited {
+            color: green;
+        }
+
+        /* mouse over link */
+        a:hover {
+            color: hotpink;
+        }
+
+        /* selected link */
+        a:active {
+            color: blue;
+        }
+    </style>
+    <script src="inc/run_prettify.js"></script>
+    <link rel="stylesheet" type="text/css" href="inc/tomorrow-night.min.css">
+<style>
+body {
+    background: #333;
+    color:#fff;
+}
+h1
+{
+    color:#fff;
+    text-decoration: underline;
+}
+h2
+{
+    color:#fff;
+}
+.container {
+    max-width: 1200px;
+    float:left;
+}
+span.highlight {
+    background-color: #382323;
+}
+</style>
+</head>
+<body>
+<h1>Cool Things I learned in Python</h1>
+
+
+<div class="container">
+--categories:
+python core functions,
+regex,
+oop
+
+
+<h2>Min Function</h2>
+<p>You can use min(number, another_number, etc..)  to create a maximum default number.
+<pre class="prettyprint lang-py">
+def likes(names):
+    n = len(names)
+    return {
+    0: 'no one likes this',
+    1: '{} likes this',
+    2: '{} and {} like this',
+    3: '{}, {} and {} like this',
+    4: '{}, {} and {others} others like this'
+    }[<span class="highlight">min(4, n)</span>].format(*names[:3], others=n-2)
+</pre>
+<h4>
+min(arg1, arg2, *args[, key])
+</h4>
+
+
+<h2>Re Sub</h2>
+<p>Replaces you, You, youuuu and u, but not youtube with 'your sister'</p>
+<pre class="prettyprint lang-py">
+import re
+
+def autocorrect(input):
+    return <span class="highlight">re.sub(r'(?i)\b(u|you+)\b', "your sister", input)</span>
+</pre>
+<h4>
+re.sub(r'pattern', 'replace string', 'full original string')
+</h4>
+(?i) Match the remainder of the pattern with the following options:
+(i)modifier: insensitive. Case insensitive match (ignores case of [a-zA-Z])
+</p>
+<p>
+\b assert position at a word boundary (^\w|\w$|\W\w|\w\W)
+</p>
+
+
+<h2>startswith()</h2>
+<pre class="prettyprint lang-py">
+def autocomplete(input_, dictionary):
+    input_ = ''.join( [ c for c in list(input_) if c.isalpha() ])
+    return [ x for x in dictionary if x.lower().<span class="highlight">startswith(input_.lower()</span>) ][:5]
+</pre>
+<h4>str.startswith(str, beg=0,end=len(string))</h4>
+<p>After filtering out non alpha characters you can use the  startswith method to autocomplete with x amount of input characters</p>
+<p>reference: <a href="https://www.tutorialspoint.com/python/python_strings.htm">https://www.tutorialspoint.com/python/python_strings.htm</a></p>
+
+
+</div>
+</body>
+</html>

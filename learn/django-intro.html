@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Study Guide for Django Intro Tutorial</title>
+    <link rel="icon" href="inc/favicon.ico?v=3" type="image/x-icon" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="../inc/lightbox.min.js"></script>
+    <script src="../inc/styleswitch.js" type="text/javascript"></script>
+
+    <link rel="stylesheet" href="../inc/style-dark.css" type="text/css">
+    <link rel="alternate stylesheet" href="../inc/style-lite.css" title="lite" type="text/css">
+</head>
+<body>
+<div class="container">
+<h1>Django Docs Intro (v1.10)
+<a href="javascript:chooseStyle('lite', 60)" class="btn">Lite</a>
+<a href="javascript:chooseStyle('none', 60)" class="btn">Dark</a>
+</h1>
+    <ol>
+        <li>Initial Steps <a target="_blank" href="https://docs.djangoproject.com/en/1.10/intro/tutorial01/">--Page 1</a></li>
+
+        <ul>
+        <li>Install django on venv with python
+        <a href="../inc/img/Screenshot_at_00-11-15.png" data-lightbox="lightbox" class="btn">Show Answer</a>
+        </li>
+        <li>start a project</li>
+        <li>test server
+        <a href="../inc/img/Screenshot_at_00-41-15.png" data-lightbox="lightbox" class="btn">Show Answer</a>
+        </li>
+        <li>start polls app
+        <a href="../inc/img/Screenshot_at_00-42-11.png" data-lightbox="lightbox" class="btn">Show Answer</a>
+        </li>
+        </ul><br>
+
+        <li>First View >/polls/*</li>
+
+        <ul>
+            <li>open views.py</li>
+            <li>import http response to polls view
+            <a href="../inc/img/Screenshot_at_00-49-57.png" data-lightbox="lightbox" class="btn">Show Answer</a>
+            </li>
+            <br>
+            <li>def index request</li>
+            <li>return http response
+            <a href="../inc/img/Screenshot_at_00-53-50.png" data-lightbox="lightbox" class="btn">Show Answer</a>
+            </li>
+            <br>
+            <li>create urls.py</li>
+            <li>import url</li>
+            <li>import views from current dir
+            <a href="../inc/img/Screenshot_at_00-56-24.png" data-lightbox="lightbox" class="btn">Show Answer</a>
+            </li>
+            <br>
+            <li>urlpatterns = list</li>
+            <li>regex, view, name
+            <a href="../inc/img/Screenshot_at_00-56-53.png" data-lightbox="lightbox" class="btn">Show Answer</a>
+            </li>
+        </ul><br>
+
+        <li>Set Route >/project/*</li>
+
+        <ul>
+        <li>open urls.py</li>
+        <li>import url, include</li>
+        <li>import contrib admin
+        <a href="../inc/img/Screenshot_at_01-00-13.png" data-lightbox="lightbox" class="btn">Show Answer</a>
+        </li>
+        <br>
+        <li>urlspatterns = list</li>
+        <li>add polls route (regex, include(view))
+        <a href="../inc/img/Screenshot_at_01-00-29.png" data-lightbox="lightbox" class="btn">Show Answer</a>
+        </li>
+        </ul><br>
+
+        <li>Database Setup <a target="_blank" href="https://docs.djangoproject.com/en/1.10/intro/tutorial02/">--Page 2</a></li>
+        <ul>
+            <li>open manage.py</li>
+            <li>if main</li>
+            <li>try import pymysql</li>
+            <li>pymysql.install_as_MySQLdb()</li>
+            <li>except pass
+            <a href="../inc/img/Screenshot_at_01-02-33.png" data-lightbox="lightbox" class="btn">Show Answer</a>
+            </li>
+        </ul><br>
+
+        <li>Database Settings >/project/*</li>
+        <ul>
+            <li>open settings.py</li>
+            <li>set current timezone</li>
+            <li>set engine to MySQL</li>
+            <li>set name, user, password, host and port for MySQL
+            <a href="../inc/img/Screenshot_at_01-03-25.png" data-lightbox="lightbox" class="btn">Show Answer</a>
+            </li>
+            <br>
+            <li>migrate database
+            <a href="../inc/img/Screenshot_at_01-43-32.png" data-lightbox="lightbox" class="btn">Show Answer</a>
+            </li>
+        </ul>
+        <br>
+
+        <li>Creating Models >/polls/*</li>
+        <ul>
+            <li>open models.py</li>
+            <li>import models
+            <a href="../inc/img/Screenshot_at_01-54-02.png" data-lightbox="lightbox" class="btn">Show Answer</a>
+            </li>
+            <br>
+            <li>Question class with input models.Model
+            <a href="../inc/img/Screenshot_at_01-54-18.png" data-lightbox="lightbox" class="btn">Show Answer</a>
+            </li>
+            <li>set question_text to 
+            <br>CharField(max_length=None, **options)
+            <a href="../inc/img/Screenshot_at_01-54-44.png" data-lightbox="lightbox" class="btn">Show Answer</a>
+            </li>
+            <li>set pub_date to: DateTimeField(auto_now=False, 
+            <br>auto_now_add=False, **options)
+            <a href="../inc/img/Screenshot_at_01-54-59.png" data-lightbox="lightbox" class="btn">Show Answer</a>
+            </li>
+            <li>def str for question text
+            <a href="../inc/img/ss_16-08-24-23-08-31.png" data-lightbox="lightbox" class="btn">Show Answer</a></li>
+            <br>
+            <li>Choice class with input models.Model
+            <a href="../inc/img/Screenshot_at_01-55-13.png" data-lightbox="lightbox" class="btn">Show Answer</a>
+            </li>
+            <li>set question to ForeignKey
+            <br>(othermodel, on_delete, **options)
+            <a href="../inc/img/Screenshot_at_01-55-24.png" data-lightbox="lightbox" class="btn">Show Answer</a>
+            </li>
+            <li>set choice_text to 
+            <br>CharField(max_length=None, **options)
+            <a href="../inc/img/Screenshot_at_01-55-39.png" data-lightbox="lightbox" class="btn">Show Answer</a>
+            </li>
+            <li>set votes to IntegerField(**options)
+            <a href="../inc/img/Screenshot_at_01-55-50.png" data-lightbox="lightbox" class="btn">Show Answer</a>
+            </li>
+            <li>def string for choice text
+            <a href="../inc/img/ss_16-08-24-23-08-47.png" data-lightbox="lightbox" class="btn">Show Answer</a>
+            </li>
+        </ul>
+        <br>
+
+        <li>Activating Models >/project/*</li>
+        <ul>
+            <li>open settings.py</li>
+            <li>add polls app PollsConfig to installed apps
+            <a href="../inc/img/Screenshot_at_01-56-17.png" data-lightbox="lightbox" class="btn">Show Answer</a>
+            </li>
+            <br>
+            <li>make polls migrations
+            <a href="../inc/img/Screenshot_at_01-56-50.png" data-lightbox="lightbox" class="btn">Show Answer</a>
+            </li>
+            <li>migrate to database
+            <a href="../inc/img/Screenshot_at_01-43-32.png" data-lightbox="lightbox" class="btn">Show Answer</a>
+            </li>
+            <br>
+            <li>create a super user
+            <a href="../inc/img/Screenshot_at_01-57-24.png" data-lightbox="lightbox" class="btn">Show Answer</a>
+            </li>
+        </ul><br>
+
+        <li>Register App to Admin Panel >/polls/*</li>
+        <ul>
+            <li>open admin.py</li>
+            <li>import admin</li>
+            <li>from current directory import models Question class
+            <a href="../inc/img/Screenshot_at_01-58-14.png" data-lightbox="lightbox" class="btn">Show Answer</a>
+            </li>
+            <br>
+            <li>register Question class
+            <a href="../inc/img/Screenshot_at_01-58-25.png" data-lightbox="lightbox" class="btn">Show Answer</a>
+            </li>
+        </ul><br>
+
+        <li>More Views >/polls/* <a target="_blank" href="https://docs.djangoproject.com/en/1.10/intro/tutorial03/">--Page 3</a></li>
+        <ul>
+            <li>open views.py</li>
+            <li>def detail with request and question id</li>
+            <li>return httpresponse string formatted question id
+            <a href="../inc/img/Screenshot_at_02-00-59.png" data-lightbox="lightbox" class="btn">Show Answer</a>
+            </li>
+            <br>
+            <li>def results with request and id</li>
+            <li>set response to string with %s</li>
+            <li>return http response string format
+            <br>response % question id
+            <a href="../inc/img/Screenshot_at_02-01-11.png" data-lightbox="lightbox" class="btn">Show Answer</a>
+            </li>
+            <br>
+            <li>def vote with request and id</li>
+            <li>return http response string % id
+            <a href="../inc/img/Screenshot_at_02-01-24.png" data-lightbox="lightbox" class="btn">Show Answer</a>
+            </li>
+            <br>
+            <li>open urls.py</li>
+            <li>import url</li>
+            <li>import views from current directory
+            <a href="../inc/img/Screenshot_at_02-01-48.png" data-lightbox="lightbox" class="btn">Show Answer</a>
+            </li>
+            <br>
+            <li>add appname namespace for {% url %}</li>
+            <li>urlpatterns = list</li>
+            <li>url(regex(id/), view, name) detail</li>
+            <li>url(regex(id/results/), view, name) results</li>
+            <li>url(regex(id/votes/), view, name) vote
+            <a href="../inc/img/Screenshot_at_02-23-29.png" data-lightbox="lightbox" class="btn">Show Answer</a>
+            </li>
+            <br>
+            <li>open views.py</li>
+            <li>import HttpResponse</li>
+            <li>from models import Question class
+            <a href="../inc/img/Screenshot_at_02-03-06.png" data-lightbox="lightbox" class="btn">Show Answer</a>
+            </li>
+            <br>
+            <li>def index with request</li>
+            <li>set latest question list to order by objects [slice 5]
+            <a href="../inc/img/Screenshot_at_02-25-45.png" data-lightbox="lightbox" class="btn">Show Answer</a>
+            </li>
+            <li>set output to join question text from latests list
+            <br>list comprehension</li>
+            <li>return output HttpResponse
+            <a href="../inc/img/Screenshot_at_02-28-10.png" data-lightbox="lightbox" class="btn">Show Answer</a>
+            </li>
+        </ul><br>
+
+        <li>First Template >/polls/templates/polls/*</li>
+        <ul>
+            <li>create index.html</li>
+            <li>{% django templating syntax %} if latest list
+            <a href="../inc/img/Screenshot_at_02-28-57.png" data-lightbox="lightbox" class="btn">Show Answer</a>
+            </li>
+            <li>ul -> for question in list
+            <a href="../inc/img/Screenshot_at_02-29-11.png" data-lightbox="lightbox" class="btn">Show Answer</a>
+            </li>
+            <li>li -> hyperlink: {% url -> view question %} 
+            <br>id text: question text
+            <a href="../inc/img/Screenshot_at_02-29-30.png" data-lightbox="lightbox" class="btn">Show Answer</a></li>
+            <li>else none available
+            <a href="../inc/img/Screenshot_at_02-30-02.png" data-lightbox="lightbox" class="btn">Show Answer</a>
+            </li>
+            <br>
+            <li>create detail.html</li>
+            <li>add question text as header</li>
+            <li>for choice in all choices</li>
+            <li>choice text
+            <a href="../inc/img/Screenshot_at_02-30-19.png" data-lightbox="lightbox" class="btn">Show Answer</a>
+            </li>
+        </ul><br>
+
+        <li>Render Views >/polls/*</li>
+        <ul>
+            <li>open views.py</li>
+            <li>from shortcuts import render, object or 404</li>
+            <li>import http response</li>
+            <li>import Question
+            <a href="../inc/img/Screenshot_at_02-35-46.png" data-lightbox="lightbox" class="btn">Show Answer</a>
+            </li>
+            <br>
+            <li>index function: latest question list  Question order by
+            <a href="../inc/img/Screenshot_at_02-38-38.png" data-lightbox="lightbox" class="btn">Show Answer</a>
+            </li>
+            <li>context = latest question list
+            <a href="../inc/img/Screenshot_at_02-38-52.png" data-lightbox="lightbox" class="btn">Show Answer</a>
+            </li>
+            <li>return render (request object, template name, dict)
+            <a href="../inc/img/Screenshot_at_02-39-19.png" data-lightbox="lightbox" class="btn">Show Answer</a>
+            </li>
+            <br>
+            <li>function detail: set question = 
+            <br>object/404(model, kwargs)
+            <a href="../inc/img/Screenshot_at_02-39-44.png" data-lightbox="lightbox" class="btn">Show Answer</a>
+            </li>
+            <li>return render (request object, template name, dict)
+            <a href="../inc/img/Screenshot_at_02-39-59.png" data-lightbox="lightbox" class="btn">Show Answer</a>
+            </li>
+        </ul><br>
+
+        <li>Vote Form >/polls/templates/polls/* <a target="_blank" href="https://docs.djangoproject.com/en/1.10/intro/tutorial04/">--Page 4</a></li>
+        <ul>
+            <li>open detail.html</li>
+            <li>h1 question text
+            <a href="../inc/img/ss_16-08-25-06-52-01.png" data-lightbox="lightbox" class="btn">Show Answer</a>
+            </li>
+            <li>if error_message p-> error message end if
+            <a href="../inc/img/ss_16-08-25-06-53-25.png" data-lightbox="lightbox" class="btn">Show Answer</a>
+            </li>
+            <li>form > action > url vote id > method post
+            <a href="../inc/img/ss_16-08-25-06-53-52.png" data-lightbox="lightbox" class="btn">Show Answer</a>
+            </li>
+            <li>csrf token
+            <a href="../inc/img/ss_16-08-25-06-54-03.png" data-lightbox="lightbox" class="btn">Show Answer</a>
+            </li>
+            <li>for choice in question choice set all
+            <a href="../inc/img/ss_16-08-25-06-54-21.png" data-lightbox="lightbox" class="btn">Show Answer</a>
+            </li>
+            <li>input > type: radio name: choice
+            <a href="../inc/img/ss_16-08-25-06-54-46.png" data-lightbox="lightbox" class="btn">Show Answer</a>
+            </li>
+            <li>id choice forloop counter value choice id
+            <a href="../inc/img/ss_16-08-25-06-55-28.png" data-lightbox="lightbox" class="btn">Show Answer</a>
+            </li>
+            <li>label > for choice forloop counter > choice text
+            <a href="../inc/img/ss_16-08-25-06-55-41.png" data-lightbox="lightbox" class="btn">Show Answer</a>
+            </li>
+            <li>endfor input > submit value vote end form
+            <a href="../inc/img/ss_16-08-25-06-55-52.png" data-lightbox="lightbox" class="btn">Show Answer</a>
+            </li><br>
+        </ul>
+        <li>Vote Function >/polls/*</li>
+        <ul>
+            <li>open views.py</li>
+            <li>import HttpResponseRedirect</li>
+            <li>import reverse</li>
+            <li>from models import Choice
+            <a href="../inc/img/ss_16-08-25-09-48-21.png" data-lightbox="lightbox" class="btn">Show Answer</a></li>
+            <br>
+            <li>vote function (clear old return)</li>
+            <li>set question to object/404(Question, pk)
+            <a href="../inc/img/ss_16-08-25-09-49-10.png" data-lightbox="lightbox" class="btn">Show Answer</a></li>
+            </li>
+            <li>try: set selected choice to 
+            <br>question choice set get pk = request.POST['choice']
+            <a href="../inc/img/ss_16-08-25-09-49-42.png" data-lightbox="lightbox" class="btn">Show Answer</a></li>
+            </li>
+            <li>except KeyError or choice doesnt exist
+            <a href="../inc/img/ss_16-08-25-09-50-08.png" data-lightbox="lightbox" class="btn">Show Answer</a></li>
+            </li>
+            <li>return render request, detail template, kwarg dicts->
+            <br>{'question': question, 'error_message': "error message"}
+            <a href="../inc/img/ss_16-08-25-09-50-43.png" data-lightbox="lightbox" class="btn">Show Answer</a></li>
+            </li>
+            <li>else: selected choice votes +1</li>
+            <li>save selected choice
+            <a href="../inc/img/ss_16-08-25-09-51-03.png" data-lightbox="lightbox" class="btn">Show Answer</a></li>
+            </li>
+            <li>HttpResponseRedirect 
+            <br>reverse polls:results args question id
+            <a href="../inc/img/ss_16-08-25-09-51-37.png" data-lightbox="lightbox" class="btn">Show Answer</a></li>
+            </li>
+            <br>
+            <li>open views.py</li>
+            <li>results funtion (clear old return)</li>
+            <li>set question to object/404(Question, pk)
+            <a href="../inc/img/ss_16-08-25-09-52-08.png" data-lightbox="lightbox" class="btn">Show Answer</a></li>
+            </li>
+            <li>return render request, template, dict
+            <a href="../inc/img/ss_16-08-25-09-52-22.png" data-lightbox="lightbox" class="btn">Show Answer</a></li>
+            </li>
+        </ul><br>
+        <li>Results >/polls/templates/polls/*</li>
+        <ul>
+            <li>create results.html</li>
+            <li>h1 question text
+            <a href="../inc/img/ss_16-08-25-09-52-42.png" data-lightbox="lightbox" class="btn">Show Answer</a></li>
+            </li>
+            <li>ul for choice in question choice set all
+            <a href="../inc/img/ss_16-08-25-09-53-08.png" data-lightbox="lightbox" class="btn">Show Answer</a></li>
+            </li>
+            <li>li choice text -- choice votes -- 
+            <br>vote: choice votes|pluralize
+            <a href="../inc/img/ss_16-08-25-09-53-25.png" data-lightbox="lightbox" class="btn">Show Answer</a></li>
+            </li>
+            <li>endfor and ul hyperlink url polls:detail id 
+            <br>> vote again?
+            <a href="../inc/img/ss_16-08-25-09-53-39.png" data-lightbox="lightbox" class="btn">Show Answer</a></li>
+            </li>
+        </ul><br>
+        <li>Style >/polls/static/* <a target="_blank" href="https://docs.djangoproject.com/en/1.10/intro/tutorial06/">--Page 6</a></li>
+        <ul>
+            <li>create static/polls directory/subdirectory</li>
+            <li>create style.css</li>
+            <li>add li a {color: green}</li>
+        </ul><br>
+        <li>Template Style >/polls/templates/polls/*</li>
+        <ul>
+            <li>open index.html</li>
+            <li>load static
+            <a href="../inc/img/ss_16-08-25-11-27-41.png" data-lightbox="lightbox" class="btn">Show Answer</a></li>
+            </li>
+            <li>link rel stylesheet type text/css 
+            <br>href static polls/style.css
+            <a href="../inc/img/ss_16-08-25-11-28-30.png" data-lightbox="lightbox" class="btn">Show Answer</a></li>
+            </li>
+        </ul><br>
+        <li>Custom Admin >/polls/* <a target="_blank" href="https://docs.djangoproject.com/en/1.10/intro/tutorial07/">--Page 7</a></li>
+        <ul>
+            <li>open admin.py</li>
+            <li>from django.contrib import admin</li>
+            <li>import Choice
+            <a href="../inc/img/ss_16-08-25-11-30-18.png" data-lightbox="lightbox" class="btn">Show Answer</a></li>
+            </li>
+            <li>class ChoiceInline TabularInline
+            <a href="../inc/img/ss_16-08-25-11-30-35.png" data-lightbox="lightbox" class="btn">Show Answer</a></li>
+            </li>
+            <li>set model set extra
+            <a href="../inc/img/ss_16-08-25-11-30-43.png" data-lightbox="lightbox" class="btn">Show Answer</a></li>
+            </li>
+            <br>
+            <li>class QuestionAdmin admin ModelAdmin
+            <a href="../inc/img/ss_16-08-25-11-31-15.png" data-lightbox="lightbox" class="btn">Show Answer</a></li>
+            </li>
+            <li>question text and date indormation field sets
+            <br>fieldsets = [(name, {'fields':[], 'classes':[]}),]
+            <a href="../inc/img/ss_16-08-27-09-55-43.png" data-lightbox="lightbox" class="btn">Show Answer</a></li>
+            </li>
+            <li>set inlines list
+            <a href="../inc/img/ss_16-08-25-11-31-41.png" data-lightbox="lightbox" class="btn">Show Answer</a></li>
+            </li>
+            <br>
+            <li>register Question and QuestionAdmin
+            <a href="../inc/img/ss_16-08-25-11-31-52.png" data-lightbox="lightbox" class="btn">Show Answer</a></li>
+            </li>
+        </ul>
+    </ol>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+</div>
+<p>By: Ryan Stefan <a href="https://www.linkedin.com/in/ryan-stefan-776aa168">in</a></p>
+
+
+
+
+
+
+    </ol>
+</body>
+</html>
