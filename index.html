@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Document</title>
+    <title>Lesson Blog Template</title>
         <style>
         body
         {
@@ -113,7 +113,21 @@ def autocomplete(input_, dictionary):
 <p>After filtering out non alpha characters you can use the  startswith method to autocomplete with x amount of input characters</p>
 <p>reference: <a href="https://www.tutorialspoint.com/python/python_strings.htm">https://www.tutorialspoint.com/python/python_strings.htm</a></p>
 
+<h2>Sort by nth character in each string in a list</h2>
+<pre class="prettyprint lang-py">
+tlist = ['2:oo', '2:aa', '2:bb']
+tlist = sorted(tlist, <span class="highlight">key=lambda n: n[2]</span>)
+</pre>
 
+<h2>key=len sort and max/min</h2>
+<pre class="prettyprint lang-py">
+fcount = len(max(flist, <span class="highlight">key=len</span>))
+</pre>
+<p>gets the length of the longest string in a list</p>
+<p>sorted(iterable[, key][, reverse])<br>
+<strong>key</strong> specifies a function of one argument that is used to extract a comparison key from each list element: key=str.lower. The default value is None (compare the elements directly).
+<br>
+<strong>reverse</strong> is a boolean value. If set to True, then the list elements are sorted as if each comparison were reversed.</p>
 </div>
 </body>
 </html>
