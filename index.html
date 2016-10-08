@@ -31,6 +31,7 @@
     </style>
     <script src="inc/run_prettify.js"></script>
     <link rel="stylesheet" type="text/css" href="inc/tomorrow-night.min.css">
+    <link rel="icon" href="inc/favicon.ico?v=3" type="image/x-icon" />
 <style>
 body {
     background: #333;
@@ -128,6 +129,29 @@ fcount = len(max(flist, <span class="highlight">key=len</span>))
 <strong>key</strong> specifies a function of one argument that is used to extract a comparison key from each list element: key=str.lower. The default value is None (compare the elements directly).
 <br>
 <strong>reverse</strong> is a boolean value. If set to True, then the list elements are sorted as if each comparison were reversed.</p>
+
+<h2>Collections</h2>
+<pre class="prettyprint lang-py">
+from collections import OrderedDict, Counter
+
+>>> Counter('abracadabra').most_common(3)
+[('a', 5), ('r', 2), ('b', 2)]
+
+>>> # dictionary sorted by key
+>>> OrderedDict(sorted(d.items(), key=lambda t: t[0]))
+OrderedDict([('apple', 4), ('banana', 3), ('orange', 2), ('pear', 1)])
+
+>>> # dictionary sorted by value
+>>> OrderedDict(sorted(d.items(), key=lambda t: t[1]))
+OrderedDict([('pear', 1), ('orange', 2), ('banana', 3), ('apple', 4)])
+
+>>> # dictionary sorted by length of the key string
+>>> OrderedDict(sorted(d.items(), key=lambda t: len(t[0])))
+OrderedDict([('pear', 1), ('apple', 4), ('orange', 2), ('banana', 3)])
+
+</pre>
+<p>Counter and OrderedDict (comes in handy, worth remembering)</p>
+<p>Reference: <a href="https://docs.python.org/3/library/collections.html">https://docs.python.org/3/library/collections.html</a></p>
 </div>
 </body>
 </html>
