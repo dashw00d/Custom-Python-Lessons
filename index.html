@@ -152,6 +152,27 @@ OrderedDict([('pear', 1), ('apple', 4), ('orange', 2), ('banana', 3)])
 </pre>
 <p>Counter and OrderedDict (comes in handy, worth remembering)</p>
 <p>Reference: <a href="https://docs.python.org/3/library/collections.html">https://docs.python.org/3/library/collections.html</a></p>
+
+
+<h2>Easy Duplicate Check</h2>
+<pre class="prettyprint lang-py">
+string = "hello"
+return len(string) == len(set(string.lower()))
+</pre>
+<p>Puts each character in a set so If a character appears twice in the string it will return False.</p>
+
+<h2>DICTIONARY/SET COMPREHENSIONS.</h2>
+<pre class="prettyprint lang-py">
+testDict = {i: i * i for i in xrange(10)} 
+testSet = {i * 2 for i in xrange(10)}
+ 
+print(testSet)
+print(testDict)
+ 
+#set([0, 2, 4, 6, 8, 10, 12, 14, 16, 18])
+#{0: 0, 1: 1, 2: 4, 3: 9, 4: 16, 5: 25, 6: 36, 7: 49, 8: 64, 9: 81}
+</pre>
+<p>Note- There is only a difference of <:> in the two statements. Also, to run the above code in Python3, replace <xrange> with <range>.</p>
 </div>
 </body>
 </html>
