@@ -173,6 +173,23 @@ print(testDict)
 #{0: 0, 1: 1, 2: 4, 3: 9, 4: 16, 5: 25, 6: 36, 7: 49, 8: 64, 9: 81}
 </pre>
 <p>Note- There is only a difference of <:> in the two statements. Also, to run the above code in Python3, replace <xrange> with <range>.</p>
+
+<h2>Any Type</h2>
+<pre class="prettyprint lang-py">
+def unique_in_order(iterable):
+    result = []
+    <span class="highlight">prev = None</span>
+    for char in iterable[0:]:
+        if char != prev:
+            result.append(char)
+            prev = char
+    return result
+
+    unique_in_order('abccdeg')
+    unique_in_order([1,5,3,4,1])
+</pre>
+<p>If you need to init a variable without knowing the specific type (int, str, etc..) use None</p>
+
 </div>
 </body>
 </html>
